@@ -1,0 +1,63 @@
+<html>
+  	<head>
+		<title>Kirana Product Billing</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
+		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+	  </head>
+	  <style>
+		body {
+			background-image: url("https://s3.envato.com/files/240683905/images/flat.png");
+				background-repeat:no-repeat;
+			   background-size:cover;
+		} 
+		table#t01 {
+  		width: 100%;    
+  		background-color:darkgray;
+		}
+		</style>
+	<body>
+	
+		<div class="jumbotron" style="text-align: center">
+			<h1>KIRANA  PRODUCT  BILLING </h1>
+		</div>
+
+		<div class="container" style="text-align:center">
+			
+			<form id="upload-file" method="post" enctype="multipart/form-data">
+				<!-- <input type="file" name="image" id="imageUpload" accept=".png, .jpg, .jpeg"> -->
+				<img src="{{ url_for('video_feed') }}">
+			</form>
+			<br><br>
+			<div style="text-align: center">
+				<button id="btn-predict" class="btn btn-primary btn-lg">Predict!</button>
+				<button id="btn_new_bill" class="btn btn-primary btn-lg">New Bill</button>
+			</div>
+			<br><br><br>
+			<table  id="t01" class="table">
+				<thead class="thead-dark">
+				  <tr>
+					<th scope="col">Sr. No</th>
+					<th scope="col">Product ID</th>
+					<th scope="col">Name of Product</th>
+					<th scope="col">Quantity</th>
+					<th scope="col">Cost of Product</th>
+					<th scope="col">Final Cost of Product</th>
+				  </tr>
+				</thead>
+				<tbody style="font-weight:900" color="Red" id="item_data">
+				</tbody>
+				<thead class="thead-dark" id="total_price">
+				</thead>
+			  </table>
+
+			  <br><br><br><br><br><br><br><br><br>
+		</div>
+		
+	<script src="{{ url_for('static', filename='js/main_19.js') }}" type="text/javascript"></script>
+	<script src="{{ url_for('static', filename='js/new_bill_3.js') }}" type="text/javascript"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  	</body>
+</html>
